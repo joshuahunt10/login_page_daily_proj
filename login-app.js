@@ -66,6 +66,10 @@ app.get('/index', function(req, res, next){
   res.render('index', {title: 'home!'});
 });
 
+app.post('/logout', function(req, res){
+  req.session.destroy();
+  res.render('logout');
+})
 
 app.listen(3000, function(){
   console.log('Shits goin banananananas yall!');
